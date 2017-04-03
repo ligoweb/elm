@@ -101,8 +101,8 @@ export default {
     }
   },
   created () {
-    axios.get('../../../static/data.json').then((res) => {
-      this.ratings = res.data.ratings
+    axios.get('api/ratings').then((res) => {
+      this.ratings = res.data.data
       this.$nextTick(() => {
         if (!this.scroll) {
           this.scroll = new BScroll(this.$refs.ratings, {

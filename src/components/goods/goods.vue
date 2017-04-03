@@ -68,8 +68,8 @@ export default {
     }
   },
   created () {
-    axios.get('../../../static/data.json').then((res) => {
-      this.goods = res.data.goods
+    axios.get('api/goods').then((res) => {
+      this.goods = res.data.data
       this.$nextTick(() => {
         this._initScroll()
         this._calculateHeight()

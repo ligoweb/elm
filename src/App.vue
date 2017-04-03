@@ -35,8 +35,8 @@ export default {
     }
   },
   created () {
-    axios.get('../static/data.json?id=12345').then((res) => {
-      this.seller = res.data.seller
+    axios.get('api/seller').then((res) => {
+      this.seller = res.data.data
     })
     .catch((res) => {
       console.log(ERR_OK)
